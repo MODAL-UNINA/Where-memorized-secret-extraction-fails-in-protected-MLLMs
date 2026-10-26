@@ -40,7 +40,7 @@ measures the two layers separately:
    on the same identities and budgets.
 
 <img width="2064" height="1392" alt="overview_measurement before_review_20261023" src="https://github.com/user-attachments/assets/6ae7d8c9-4620-4f94-b1f7-c0f3ded0e9cb" />
-))
+
 
 
 
