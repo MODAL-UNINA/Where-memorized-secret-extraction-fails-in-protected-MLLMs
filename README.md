@@ -105,11 +105,11 @@ previous ones.
 Offline analyses on the saved responses (CPU only, no launcher):
 
 ```bash
-python TDSC/scripts/filter_counterfactual_v1.py      # alternative output filters
-python TDSC/scripts/filter_false_positives_v1.py     # filter false positives on benign text
-python TDSC/scripts/body_rescore_v1.py               # rescoring on the private part of the secret
-python TDSC/scripts/partial_leakage_v1.py            # partial and cross-identity disclosure
-python TDSC/scripts/paired_ladder_stats.py           # exact McNemar tests with Holm correction
+python scripts/scripts/filter_counterfactual_v1.py      # alternative output filters
+python scripts/scripts/filter_false_positives_v1.py     # filter false positives on benign text
+python scripts/scripts/body_rescore_v1.py               # rescoring on the private part of the secret
+python scripts/scripts/partial_leakage_v1.py            # partial and cross-identity disclosure
+python scripts/scripts/paired_ladder_stats.py           # exact McNemar tests with Holm correction
 ```
 
 ### 4. Utility (RQ4)
