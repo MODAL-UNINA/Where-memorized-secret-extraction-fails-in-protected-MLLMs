@@ -2,17 +2,7 @@
 
 Measurement of Canary Leakage in Protected Multimodal Large Language Models
 
-
-
-Multimodal large language models (MLLMs) fine-tuned on private data can
-
-memorize secrets. Deployments usually protect them with two layers: a
-
-confidentiality **system prompt** and an **output filter**. This repository
-
-measures the two layers separately:
-
-
+Multimodal large language models (MLLMs) fine-tuned on private data can memorize secrets. Deployments usually protect them with two layers: a confidentiality **system prompt** and an **output filter**. This repository measures the two layers separately:
 
 **Implantation.** Secrets (canaries) are implanted into Qwen2-VL-7B and
    LLaVA-1.5-7B with LoRA fine-tuning.
