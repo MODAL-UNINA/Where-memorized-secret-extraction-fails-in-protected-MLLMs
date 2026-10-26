@@ -7,27 +7,11 @@ Multimodal large language models (MLLMs) fine-tuned on private data can memorize
 **Implantation.** Secrets (canaries) are implanted into Qwen2-VL-7B and
    LLaVA-1.5-7B with LoRA fine-tuning.
 
-2. **Qualification.** A target enters the study only if it passes a
+2. **Qualification.** A target enters the study only if it passes a memorization gate (every implanted secret is recovered exactly, no never-implanted secret is) and a utility check.
 
-   memorization gate (every implanted secret is recovered exactly, no
+3. **Four-level defense ladder.** Every query is answered with a neutral and with the protected system prompt, and every answer is scored before and after the filter. The four levels (N = no defense, S = system prompt only, F = filter only, P = both) therefore share the same generations.
 
-   never-implanted secret is) and a utility check.
-
-3. **Four-level defense ladder.** Every query is answered with a neutral and
-
-   with the protected system prompt, and every answer is scored before and
-
-   after the filter. The four levels (N = no defense, S = system prompt only,
-
-   F = filter only, P = both) therefore share the same generations.
-
-4. **Attacks.** Fixed prompts (Direct, DAN, Paraphrase), visual attacks
-
-   (FigStep, form/HADES-style images), adaptive attackers (PAIR,
-
-   AutoDAN-Turbo-style, HADES black-box) and the MM-LEAK PPO attacker are run
-
-   on the same identities and budgets.
+4. **Attacks.** Fixed prompts (Direct, DAN, Paraphrase), visual attacks (FigStep, form/HADES-style images), adaptive attackers (PAIR, AutoDAN-Turbo-style, HADES black-box) and the MM-LEAK PPO attacker are run on the same identities and budgets.
 
 <img width="2064" height="1392" alt="overview_measurement before_review_20261023" src="https://github.com/user-attachments/assets/6ae7d8c9-4620-4f94-b1f7-c0f3ded0e9cb" />
 
