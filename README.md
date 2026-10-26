@@ -19,8 +19,8 @@ measures the two layers separately:
    (FigStep, form/HADES-style images), adaptive attackers (PAIR,
    AutoDAN-Turbo-style, HADES black-box) and the MM-LEAK PPO attacker are run
    on the same identities and budgets.
-
-[overview_measurement.before_review_20261023.pdf](https://github.com/user-attachments/files/33968718/overview_measurement.before_review_20261023.pdf)
+![Testo Alternativo]([overview_measurement.before_review_20261023.pdf](https://github.com/user-attachments/files/33968870/overview_measurement.before_review_20261023.pdf)
+)
 
 The study then asks why the filter works (recall is literal), which
 disclosures it misses (untagged and partial copies), and where it fails (raw
