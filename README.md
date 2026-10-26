@@ -151,7 +151,6 @@ tables (counts only, no secrets or responses).
 
 All secrets are synthetic; no real personal data is used.
 
-```
 
 
 
