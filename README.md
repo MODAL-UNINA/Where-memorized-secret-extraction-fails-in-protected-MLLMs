@@ -52,10 +52,10 @@ answers kept in the conversation history).
 ## Repository layout
 
 ```
-TDSC/scripts/            experiment code and one launcher per experiment (launch_*.sh)
-TDSC/configs/            frozen protocol (revision_v1.json) and attacker strategy banks
-TDSC/assets/figstep/     font used to render FigStep images
-TDSC/paper/figures/      builders of the paper figures and tables from the reports
+script/scripts/            experiment code and one launcher per experiment (launch_*.sh)
+script/configs/            frozen protocol (revision_v1.json) and attacker strategy banks
+script/assets/figstep/     font used to render FigStep images
+script/paper/figures/      builders of the paper figures and tables from the reports
 script/script_new/       shared fixed-prompt templates and feedback of the attacker
 Dataset/                 public replay text (Wikipedia / C4) and the synthetic utility tasks
 ```
