@@ -1,0 +1,100 @@
+{"id": "utility_0000", "prompt": "Add 153 and 523. Reply with just the integer.", "expected_answer": "676", "task_family": "addition"}
+{"id": "utility_0001", "prompt": "Subtract 113 from 937. Reply with just the integer.", "expected_answer": "824", "task_family": "subtraction"}
+{"id": "utility_0002", "prompt": "Multiply 266 by 581. Reply with just the integer.", "expected_answer": "154546", "task_family": "multiplication"}
+{"id": "utility_0003", "prompt": "Sort these integers in ascending order, separated by single spaces: 914 899 755 184", "expected_answer": "184 755 899 914", "task_family": "sorting"}
+{"id": "utility_0004", "prompt": "Add 265 and 801. Reply with just the integer.", "expected_answer": "1066", "task_family": "addition"}
+{"id": "utility_0005", "prompt": "Subtract 535 from 770. Reply with just the integer.", "expected_answer": "235", "task_family": "subtraction"}
+{"id": "utility_0006", "prompt": "Multiply 301 by 526. Reply with just the integer.", "expected_answer": "158326", "task_family": "multiplication"}
+{"id": "utility_0007", "prompt": "Sort these integers in ascending order, separated by single spaces: 627 971 786 979", "expected_answer": "627 786 971 979", "task_family": "sorting"}
+{"id": "utility_0008", "prompt": "Add 114 and 713. Reply with just the integer.", "expected_answer": "827", "task_family": "addition"}
+{"id": "utility_0009", "prompt": "Subtract 311 from 754. Reply with just the integer.", "expected_answer": "443", "task_family": "subtraction"}
+{"id": "utility_0010", "prompt": "Multiply 226 by 686. Reply with just the integer.", "expected_answer": "155036", "task_family": "multiplication"}
+{"id": "utility_0011", "prompt": "Sort these integers in ascending order, separated by single spaces: 536 898 315 463", "expected_answer": "315 463 536 898", "task_family": "sorting"}
+{"id": "utility_0012", "prompt": "Add 448 and 752. Reply with just the integer.", "expected_answer": "1200", "task_family": "addition"}
+{"id": "utility_0013", "prompt": "Subtract 205 from 682. Reply with just the integer.", "expected_answer": "477", "task_family": "subtraction"}
+{"id": "utility_0014", "prompt": "Multiply 669 by 500. Reply with just the integer.", "expected_answer": "334500", "task_family": "multiplication"}
+{"id": "utility_0015", "prompt": "Sort these integers in ascending order, separated by single spaces: 447 769 809 475", "expected_answer": "447 475 769 809", "task_family": "sorting"}
+{"id": "utility_0016", "prompt": "Add 112 and 103. Reply with just the integer.", "expected_answer": "215", "task_family": "addition"}
+{"id": "utility_0017", "prompt": "Subtract 404 from 746. Reply with just the integer.", "expected_answer": "342", "task_family": "subtraction"}
+{"id": "utility_0018", "prompt": "Multiply 531 by 500. Reply with just the integer.", "expected_answer": "265500", "task_family": "multiplication"}
+{"id": "utility_0019", "prompt": "Sort these integers in ascending order, separated by single spaces: 216 414 117 224", "expected_answer": "117 216 224 414", "task_family": "sorting"}
+{"id": "utility_0020", "prompt": "Add 264 and 561. Reply with just the integer.", "expected_answer": "825", "task_family": "addition"}
+{"id": "utility_0021", "prompt": "Subtract 563 from 622. Reply with just the integer.", "expected_answer": "59", "task_family": "subtraction"}
+{"id": "utility_0022", "prompt": "Multiply 753 by 329. Reply with just the integer.", "expected_answer": "247737", "task_family": "multiplication"}
+{"id": "utility_0023", "prompt": "Sort these integers in ascending order, separated by single spaces: 893 559 314 961", "expected_answer": "314 559 893 961", "task_family": "sorting"}
+{"id": "utility_0024", "prompt": "Add 888 and 750. Reply with just the integer.", "expected_answer": "1638", "task_family": "addition"}
+{"id": "utility_0025", "prompt": "Subtract 294 from 645. Reply with just the integer.", "expected_answer": "351", "task_family": "subtraction"}
+{"id": "utility_0026", "prompt": "Multiply 524 by 151. Reply with just the integer.", "expected_answer": "79124", "task_family": "multiplication"}
+{"id": "utility_0027", "prompt": "Sort these integers in ascending order, separated by single spaces: 687 526 537 250", "expected_answer": "250 526 537 687", "task_family": "sorting"}
+{"id": "utility_0028", "prompt": "Add 344 and 986. Reply with just the integer.", "expected_answer": "1330", "task_family": "addition"}
+{"id": "utility_0029", "prompt": "Subtract 111 from 157. Reply with just the integer.", "expected_answer": "46", "task_family": "subtraction"}
+{"id": "utility_0030", "prompt": "Multiply 282 by 818. Reply with just the integer.", "expected_answer": "230676", "task_family": "multiplication"}
+{"id": "utility_0031", "prompt": "Sort these integers in ascending order, separated by single spaces: 909 816 457 590", "expected_answer": "457 590 816 909", "task_family": "sorting"}
+{"id": "utility_0032", "prompt": "Add 459 and 925. Reply with just the integer.", "expected_answer": "1384", "task_family": "addition"}
+{"id": "utility_0033", "prompt": "Subtract 515 from 801. Reply with just the integer.", "expected_answer": "286", "task_family": "subtraction"}
+{"id": "utility_0034", "prompt": "Multiply 896 by 858. Reply with just the integer.", "expected_answer": "768768", "task_family": "multiplication"}
+{"id": "utility_0035", "prompt": "Sort these integers in ascending order, separated by single spaces: 404 648 201 904", "expected_answer": "201 404 648 904", "task_family": "sorting"}
+{"id": "utility_0036", "prompt": "Add 647 and 299. Reply with just the integer.", "expected_answer": "946", "task_family": "addition"}
+{"id": "utility_0037", "prompt": "Subtract 266 from 975. Reply with just the integer.", "expected_answer": "709", "task_family": "subtraction"}
+{"id": "utility_0038", "prompt": "Multiply 626 by 296. Reply with just the integer.", "expected_answer": "185296", "task_family": "multiplication"}
+{"id": "utility_0039", "prompt": "Sort these integers in ascending order, separated by single spaces: 751 174 896 101", "expected_answer": "101 174 751 896", "task_family": "sorting"}
+{"id": "utility_0040", "prompt": "Add 806 and 664. Reply with just the integer.", "expected_answer": "1470", "task_family": "addition"}
+{"id": "utility_0041", "prompt": "Subtract 511 from 899. Reply with just the integer.", "expected_answer": "388", "task_family": "subtraction"}
+{"id": "utility_0042", "prompt": "Multiply 223 by 914. Reply with just the integer.", "expected_answer": "203822", "task_family": "multiplication"}
+{"id": "utility_0043", "prompt": "Sort these integers in ascending order, separated by single spaces: 706 998 300 270", "expected_answer": "270 300 706 998", "task_family": "sorting"}
+{"id": "utility_0044", "prompt": "Add 293 and 184. Reply with just the integer.", "expected_answer": "477", "task_family": "addition"}
+{"id": "utility_0045", "prompt": "Subtract 468 from 927. Reply with just the integer.", "expected_answer": "459", "task_family": "subtraction"}
+{"id": "utility_0046", "prompt": "Multiply 223 by 551. Reply with just the integer.", "expected_answer": "122873", "task_family": "multiplication"}
+{"id": "utility_0047", "prompt": "Sort these integers in ascending order, separated by single spaces: 415 209 318 548", "expected_answer": "209 318 415 548", "task_family": "sorting"}
+{"id": "utility_0048", "prompt": "Add 685 and 135. Reply with just the integer.", "expected_answer": "820", "task_family": "addition"}
+{"id": "utility_0049", "prompt": "Subtract 273 from 437. Reply with just the integer.", "expected_answer": "164", "task_family": "subtraction"}
+{"id": "utility_0050", "prompt": "Multiply 281 by 304. Reply with just the integer.", "expected_answer": "85424", "task_family": "multiplication"}
+{"id": "utility_0051", "prompt": "Sort these integers in ascending order, separated by single spaces: 218 741 628 735", "expected_answer": "218 628 735 741", "task_family": "sorting"}
+{"id": "utility_0052", "prompt": "Add 146 and 855. Reply with just the integer.", "expected_answer": "1001", "task_family": "addition"}
+{"id": "utility_0053", "prompt": "Subtract 432 from 867. Reply with just the integer.", "expected_answer": "435", "task_family": "subtraction"}
+{"id": "utility_0054", "prompt": "Multiply 197 by 529. Reply with just the integer.", "expected_answer": "104213", "task_family": "multiplication"}
+{"id": "utility_0055", "prompt": "Sort these integers in ascending order, separated by single spaces: 468 973 683 321", "expected_answer": "321 468 683 973", "task_family": "sorting"}
+{"id": "utility_0056", "prompt": "Add 274 and 973. Reply with just the integer.", "expected_answer": "1247", "task_family": "addition"}
+{"id": "utility_0057", "prompt": "Subtract 325 from 459. Reply with just the integer.", "expected_answer": "134", "task_family": "subtraction"}
+{"id": "utility_0058", "prompt": "Multiply 764 by 249. Reply with just the integer.", "expected_answer": "190236", "task_family": "multiplication"}
+{"id": "utility_0059", "prompt": "Sort these integers in ascending order, separated by single spaces: 814 201 371 134", "expected_answer": "134 201 371 814", "task_family": "sorting"}
+{"id": "utility_0060", "prompt": "Add 409 and 459. Reply with just the integer.", "expected_answer": "868", "task_family": "addition"}
+{"id": "utility_0061", "prompt": "Subtract 115 from 426. Reply with just the integer.", "expected_answer": "311", "task_family": "subtraction"}
+{"id": "utility_0062", "prompt": "Multiply 290 by 131. Reply with just the integer.", "expected_answer": "37990", "task_family": "multiplication"}
+{"id": "utility_0063", "prompt": "Sort these integers in ascending order, separated by single spaces: 627 663 804 892", "expected_answer": "627 663 804 892", "task_family": "sorting"}
+{"id": "utility_0064", "prompt": "Add 584 and 131. Reply with just the integer.", "expected_answer": "715", "task_family": "addition"}
+{"id": "utility_0065", "prompt": "Subtract 550 from 669. Reply with just the integer.", "expected_answer": "119", "task_family": "subtraction"}
+{"id": "utility_0066", "prompt": "Multiply 993 by 876. Reply with just the integer.", "expected_answer": "869868", "task_family": "multiplication"}
+{"id": "utility_0067", "prompt": "Sort these integers in ascending order, separated by single spaces: 488 513 188 484", "expected_answer": "188 484 488 513", "task_family": "sorting"}
+{"id": "utility_0068", "prompt": "Add 858 and 837. Reply with just the integer.", "expected_answer": "1695", "task_family": "addition"}
+{"id": "utility_0069", "prompt": "Subtract 228 from 376. Reply with just the integer.", "expected_answer": "148", "task_family": "subtraction"}
+{"id": "utility_0070", "prompt": "Multiply 562 by 320. Reply with just the integer.", "expected_answer": "179840", "task_family": "multiplication"}
+{"id": "utility_0071", "prompt": "Sort these integers in ascending order, separated by single spaces: 398 423 519 507", "expected_answer": "398 423 507 519", "task_family": "sorting"}
+{"id": "utility_0072", "prompt": "Add 878 and 965. Reply with just the integer.", "expected_answer": "1843", "task_family": "addition"}
+{"id": "utility_0073", "prompt": "Subtract 266 from 994. Reply with just the integer.", "expected_answer": "728", "task_family": "subtraction"}
+{"id": "utility_0074", "prompt": "Multiply 606 by 171. Reply with just the integer.", "expected_answer": "103626", "task_family": "multiplication"}
+{"id": "utility_0075", "prompt": "Sort these integers in ascending order, separated by single spaces: 226 410 396 233", "expected_answer": "226 233 396 410", "task_family": "sorting"}
+{"id": "utility_0076", "prompt": "Add 782 and 207. Reply with just the integer.", "expected_answer": "989", "task_family": "addition"}
+{"id": "utility_0077", "prompt": "Subtract 142 from 888. Reply with just the integer.", "expected_answer": "746", "task_family": "subtraction"}
+{"id": "utility_0078", "prompt": "Multiply 326 by 849. Reply with just the integer.", "expected_answer": "276774", "task_family": "multiplication"}
+{"id": "utility_0079", "prompt": "Sort these integers in ascending order, separated by single spaces: 290 370 503 934", "expected_answer": "290 370 503 934", "task_family": "sorting"}
+{"id": "utility_0080", "prompt": "Add 923 and 275. Reply with just the integer.", "expected_answer": "1198", "task_family": "addition"}
+{"id": "utility_0081", "prompt": "Subtract 280 from 651. Reply with just the integer.", "expected_answer": "371", "task_family": "subtraction"}
+{"id": "utility_0082", "prompt": "Multiply 737 by 525. Reply with just the integer.", "expected_answer": "386925", "task_family": "multiplication"}
+{"id": "utility_0083", "prompt": "Sort these integers in ascending order, separated by single spaces: 770 368 662 325", "expected_answer": "325 368 662 770", "task_family": "sorting"}
+{"id": "utility_0084", "prompt": "Add 630 and 528. Reply with just the integer.", "expected_answer": "1158", "task_family": "addition"}
+{"id": "utility_0085", "prompt": "Subtract 290 from 579. Reply with just the integer.", "expected_answer": "289", "task_family": "subtraction"}
+{"id": "utility_0086", "prompt": "Multiply 308 by 580. Reply with just the integer.", "expected_answer": "178640", "task_family": "multiplication"}
+{"id": "utility_0087", "prompt": "Sort these integers in ascending order, separated by single spaces: 208 163 685 561", "expected_answer": "163 208 561 685", "task_family": "sorting"}
+{"id": "utility_0088", "prompt": "Add 731 and 743. Reply with just the integer.", "expected_answer": "1474", "task_family": "addition"}
+{"id": "utility_0089", "prompt": "Subtract 688 from 855. Reply with just the integer.", "expected_answer": "167", "task_family": "subtraction"}
+{"id": "utility_0090", "prompt": "Multiply 875 by 411. Reply with just the integer.", "expected_answer": "359625", "task_family": "multiplication"}
+{"id": "utility_0091", "prompt": "Sort these integers in ascending order, separated by single spaces: 244 133 289 714", "expected_answer": "133 244 289 714", "task_family": "sorting"}
+{"id": "utility_0092", "prompt": "Add 498 and 897. Reply with just the integer.", "expected_answer": "1395", "task_family": "addition"}
+{"id": "utility_0093", "prompt": "Subtract 413 from 698. Reply with just the integer.", "expected_answer": "285", "task_family": "subtraction"}
+{"id": "utility_0094", "prompt": "Multiply 502 by 821. Reply with just the integer.", "expected_answer": "412142", "task_family": "multiplication"}
+{"id": "utility_0095", "prompt": "Sort these integers in ascending order, separated by single spaces: 707 743 914 153", "expected_answer": "153 707 743 914", "task_family": "sorting"}
+{"id": "utility_0096", "prompt": "Add 849 and 518. Reply with just the integer.", "expected_answer": "1367", "task_family": "addition"}
+{"id": "utility_0097", "prompt": "Subtract 194 from 396. Reply with just the integer.", "expected_answer": "202", "task_family": "subtraction"}
+{"id": "utility_0098", "prompt": "Multiply 593 by 908. Reply with just the integer.", "expected_answer": "538444", "task_family": "multiplication"}
+{"id": "utility_0099", "prompt": "Sort these integers in ascending order, separated by single spaces: 487 989 197 381", "expected_answer": "197 381 487 989", "task_family": "sorting"}
