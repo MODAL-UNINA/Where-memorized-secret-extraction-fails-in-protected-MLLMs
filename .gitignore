@@ -1,6 +1,13 @@
-*.i
-*.ii
-*.gpu
-*.ptx
-*.cubin
-*.fatbin
+# evaluator-private keys, training sets, raw responses and reports
+private/
+# adapters and run logs
+runs/
+# generated public case files and image assets
+TDSC/revision_v1/
+TDSC/e10/
+TDSC/e14/
+TDSC/e14_variants/
+TDSC/e15/
+__pycache__/
+*.pyc
+*.log
