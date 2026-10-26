@@ -1,4 +1,4 @@
-# *Where Memorized-Secret Extraction Fails: A Defense-Layer
+# Where Memorized-Secret Extraction Fails: A Defense-Layer
 Measurement of Canary Leakage in Protected Multimodal Large Language Models
 
 Multimodal large language models (MLLMs) fine-tuned on private data can
