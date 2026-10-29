@@ -1,28 +1,24 @@
-# Where Memorized-Secret Extraction Fails: A Defense-Layer
+# MM-Leak: where memorized-secret extraction fails in protected MLLMs
 
-Measurement of Canary Leakage in Protected Multimodal Large Language Models
+Code for the paper *Where Memorized-Secret Extraction Fails: Measuring Defense
+Layers in Protected Multimodal LLMs* (submitted to IEEE Transactions on
+Dependable and Secure Computing).
 
-Multimodal large language models (MLLMs) fine-tuned on private data can memorize secrets. Deployments usually protect them with two layers: a confidentiality **system prompt** and an **output filter**. This repository measures the two layers separately:
+Multimodal large language models (MLLMs) fine-tuned on private data can
+memorize secrets. Deployments usually protect them with two layers: a
+confidentiality **system prompt** and an **output filter**. This repository
+measures the two layers separately:
 
-**Implantation.** Secrets (canaries) are implanted into Qwen2-VL-7B and
-   LLaVA-1.5-7B with LoRA fine-tuning.
-
+1. **Implantation.** Secrets (canaries) are implanted into Qwen2-VL-7B and LLaVA-1.5-7B with LoRA fine-tuning.
 2. **Qualification.** A target enters the study only if it passes a memorization gate (every implanted secret is recovered exactly, no never-implanted secret is) and a utility check.
-
-3. **Four-level defense ladder.** Every query is answered with a neutral and with the protected system prompt, and every answer is scored before and after the filter. The four levels (N = no defense, S = system prompt only, F = filter only, P = both) therefore share the same generations.
-
+3. **Four-level defense ladder.** Every query is answered with a neutral and with the protected system prompt, and every answer is scored before and after the filter. The four levels (N = no defense, S = system prompt only,
+   F = filter only, P = both) therefore share the same generations.
 4. **Attacks.** Fixed prompts (Direct, DAN, Paraphrase), visual attacks (FigStep, form/HADES-style images), adaptive attackers (PAIR, AutoDAN-Turbo-style, HADES black-box) and the MM-LEAK PPO attacker are run on the same identities and budgets.
 
-<img width="2064" height="1392" alt="overview_measurement before_review_20261023" src="https://github.com/user-attachments/assets/6ae7d8c9-4620-4f94-b1f7-c0f3ded0e9cb" />
+<img width="2064" height="1392" alt="Study design: implantation and qualification, four-level defense ladder, mechanism controls" src="https://github.com/user-attachments/assets/6ae7d8c9-4620-4f94-b1f7-c0f3ded0e9cb" />
 
+The study then asks why the filter works (recall is literal), whic disclosures it misses (untagged and partial copies), and where it fails (ra answers kept in the conversation history).
 
-
-
-The study then asks why the filter works (recall is literal), which
-
-disclosures it misses (untagged and partial copies), and where it fails (raw
-
-answers kept in the conversation history). 
 ## Repository layout
 
 ```
@@ -30,7 +26,9 @@ script/scripts/            experiment code and one launcher per experiment (laun
 script/configs/            frozen protocol (revision_v1.json) and attacker strategy banks
 script/assets/figstep/     font used to render FigStep images
 script/paper/figures/      builders of the paper figures and tables from the reports
-script/script_new/       shared fixed-prompt templates and feedback of the attacker
+script/paper/              frozen plans of E19, E20, E21 and of the leakage endpoints
+script/script_new/       MM-LEAK attacker (phase2_v3_long_fix3), shared templates and feedback
+Phase_3/                 legacy DAN attacker; the fixed DAN templates are read from it
 Dataset/                 public replay text (Wikipedia / C4) and the synthetic utility tasks
 ```
 
@@ -50,16 +48,11 @@ conda activate mmleak
 pip install -r requirements.txt
 ```
 
-The launchers use `python3` from the active environment and the repository
-root by default; override with `MMLEAK_PYTHON` and `MMLEAK_ROOT`. Select the
-GPU with `GPU_ID` (default 0). Every launcher is resumable and stops at a
-failed gate. Base models (`Qwen/Qwen2-VL-7B-Instruct`,
-`llava-hf/llava-1.5-7b-hf`) are downloaded from the Hugging Face Hub.
+The launchers use `python3` from the active environment and the repositor root by default; override with `MMLEAK_PYTHON` and `MMLEAK_ROOT`. Select th GPU with `GPU_ID` (default 0). Every launcher is resumable and stops at failed gate. Base models (`Qwen/Qwen2-VL-7B-Instruct`, `llava-hf/llava-1.5-7b-hf`) are downloaded from the Hugging Face Hub.
 
 ## Reproducing the study
 
-Run the commands from the repository root. Each step reads the outputs of the
-previous ones.
+Run the commands from the repository root. Each step reads the outputs of the previous ones.
 
 ### 1. Targets
 
@@ -87,6 +80,9 @@ previous ones.
 | System-prompt wording (E11), Qwen / LLaVA | `launch_system_prompt_sensitivity.sh`, `launch_e11_llava.sh` | `system_prompt_sensitivity_v1.py`, `e11_llava_v3.py` |
 | Training without refusals (E16) | `launch_e16.sh` (`TARGET_SEED=101..103`) | `e16_no_refusal.py` |
 | Secrets trained under the protected instruction (E17) | `launch_e17.sh` (`TARGET_SEED=101..103`) | `e17_deployer_instruction.py` |
+| Utility under the E11 wordings (E11b) | none: `plan`, `run --gpu-id 0`, `report` | `system_prompt_utility_v1.py` |
+| Unseen instructions without confidentiality content (E19), Qwen / LLaVA | `launch_e19.sh`, `launch_e19_llava.sh` | `e19_neutral_context_v1.py`, `e19_llava_v3.py`; `e19_report_refcheck.py` re-verifies the reference ledger |
+| Secrets trained without a system turn (E20) | `launch_e20.sh` (`TARGET_SEEDS="101 102 103"`), then `e20_no_system_context.py report` | `e20_no_system_context.py` |
 
 ### 3. Why the filter works and where it fails (RQ3)
 
@@ -100,15 +96,18 @@ previous ones.
 | Visual attacks on image-bound secrets (E14c) | `launch_e14_visual_attacks.sh` | `e14_visual_attacks.py` |
 | Number of training repetitions R=50/10/3 (E15) | `launch_e15.sh` | `e15_repetition.py` |
 | Spelled-out re-encoding (E18) | `launch_e18.sh` (`PART=incontext` or `twoturn`) | `e18_spelled_reencoding.py` |
+| E9 through an OpenAI-compatible chat server with LangChain memory and guards (E21) | `launch_e21.sh` (`WITH_LLAVA=1` adds LLaVA v3) | `e21_chat_pipeline.py` |
 
 Offline analyses on the saved responses (CPU only, no launcher):
 
 ```bash
-python scripts/scripts/filter_counterfactual_v1.py      # alternative output filters
-python scripts/scripts/filter_false_positives_v1.py     # filter false positives on benign text
-python scripts/scripts/body_rescore_v1.py               # rescoring on the private part of the secret
-python scripts/scripts/partial_leakage_v1.py            # partial and cross-identity disclosure
-python scripts/scripts/paired_ladder_stats.py           # exact McNemar tests with Holm correction
+python TDSC/scripts/filter_counterfactual_v1.py      # alternative output filters
+python TDSC/scripts/filter_false_positives_v1.py     # filter false positives on benign text
+python TDSC/scripts/filter_false_positives_v2.py     # same test for the private-part filter
+python TDSC/scripts/body_rescore_v1.py               # rescoring on the private part of the secret
+python TDSC/scripts/partial_leakage_v1.py            # partial and cross-identity disclosure
+python TDSC/scripts/paired_ladder_stats.py           # exact McNemar tests with Holm correction
+python TDSC/scripts/leakage_endpoints_e19_v1.py      # frozen leakage endpoints on the E19 ledger
 ```
 
 ### 4. Utility (RQ4)
@@ -129,13 +128,16 @@ tables (counts only, no secrets or responses).
 
 ## Evaluation discipline
 
-- Secrets are derived with HMAC-SHA256 from an evaluator-private key and never
-  appear in the public case files that attack code reads.
-- Prompts, templates and attacker settings are frozen on the dev targets and
-  evaluated once on the eval targets; every target call is counted.
-- Each run writes a frozen plan with the SHA-256 of its scripts, data and
-  adapters, and resuming stops if any of them changed. Start new runs from a
-  clean checkout rather than resuming runs made with an older version.
+- Secrets are derived with HMAC-SHA256 from an evaluator-private key and never appear in the public case files that attack code reads.
+- Prompts, templates and attacker settings are frozen on the dev targets and evaluated once on the eval targets; every target call is counted.
+- Each run writes a frozen plan with the SHA-256 of its scripts, data and adapters, and resuming stops if any of them changed. Start new runs from a clean checkout rather than resuming runs made with an older version.
+
+## Frozen plans and redactions
+
+E19, E20, E21 and the leakage endpoints were frozen in the documents in `script/paper/` before their first call; the scripts check the wordings and template hashes listed there. In the published copies of these documents, of the launchers, and of `e16_no_refusal.py`, `e20_no_system_context.py`, `e21_chat_pipeline.py`, `leakage_endpoints_e19_v1.py`, `filter_false_positives_v2.py`, `llava_v3_measurements.py` and `Phase_3/DAN_attacker.py`, the two machines used for the study are called server A and server B, and absolute paths are replaced by the repository root or by `MMLEAK_ROOT`, `MMLEAK_PYTHON` and `MMLEAK_FOREIGN_PREFIX`. No wording, template, threshold or scoring rule was changed.
+
+The code hashes listed in `E20_NO_SYSTEM_CONTEXT_PLAN_2026-10-27.md` and in the freeze block of `E21_CHAT_PIPELINE_PLAN_2026-10-27.md` refer to the files used for the runs, so they differ for the redacted files, and `e21_chat_pipeline.py check` (run by `launch_e21.sh`) reports these
+differences. To run E21 on your own targets, first write the output of `python TDSC/scripts/e21_chat_pipeline.py hashes` into that block. The helper that copied E20 inputs between the two servers and its manifest are not published; `launch_e20.sh` checks `TDSC/scripts/e20_manifest.sha256` only if it exists. The seed-42 attack cases and splits used as defaults by the legacy code in `script/script_new/` are not published and are not used by the experiments of the paper.
 
 ## Data
 
@@ -149,7 +151,3 @@ tables (counts only, no secrets or responses).
   (`derek-thomas/ScienceQA`, `lmms-lab/POPE`).
 
 All secrets are synthetic; no real personal data is used.
-
-
-
-
